@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import "package:travel_plan/page/counter.dart";
+
 import "package:travel_plan/bloc/counter.dart";
-import "package:travel_plan/model/plan.dart";
-import "package:travel_plan/page/component/plan_card.dart";
+import "package:travel_plan/page/plan.dart";
+import "package:travel_plan/page/login.dart";
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -15,15 +15,14 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    Plan plan = Plan();
-    plan.createBy = "lings";
-    plan.createTime = "2018-02-02 20:20:00";
-    plan.delFlag = 0;
-    plan.title = "北京";
-
     return MaterialApp(
       title: '行程助手',
-      home:PlanCard(plan)
+
+      initialRoute: "/login",
+      routes: {
+        "/": (context) => PlanPage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
 

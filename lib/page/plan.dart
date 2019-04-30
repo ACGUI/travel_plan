@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:travel_plan/page/component/plan_card.dart";
+import "package:travel_plan/page/component/planCard.dart";
 import "package:travel_plan/model/plan.dart";
 
 class PlanPage extends StatelessWidget {
@@ -16,7 +16,9 @@ class PlanPage extends StatelessWidget {
         title: Text("行程助手"),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/planform");
+        },
         child: Icon(Icons.add),
         backgroundColor: Colors.lightGreen,
       ),

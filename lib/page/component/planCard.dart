@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:travel_plan/model/plan.dart";
 
 class PlanCard extends StatelessWidget {
-  Plan _plan;
+  final Plan _plan;
 
   PlanCard(this._plan);
 
@@ -33,7 +33,7 @@ class PlanCard extends StatelessWidget {
   Widget _Cover({Widget child}) {
     return Container(
       width: 1000,
-      height: 80,
+      height: 75,
       color: Color.fromRGBO(0, 0, 0, 0.5),
       padding: EdgeInsets.all(10),
       child: child,
@@ -45,10 +45,10 @@ class PlanCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          _plan.createTime + " 出发",
+          _plan.startDate + " 出发",
           style: TextStyle(color: Colors.white),
         ),
-        Text(_plan.title, style: TextStyle(fontSize: 20, color: Colors.white)),
+        Text(_plan.city, style: TextStyle(fontSize: 20, color: Colors.white)),
       ],
     );
   }

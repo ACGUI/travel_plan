@@ -7,9 +7,9 @@ class PlanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Plan plan = Plan();
     plan.createBy = "lings";
-    plan.createTime = "2018-02-02 20:20:00";
+    plan.startDate = "2018-02-02";
     plan.delFlag = 0;
-    plan.title = "北京";
+    plan.city = "北京";
     plan.bgImg = "https://iph.href.lu/879x800";
     return Scaffold(
       appBar: AppBar(

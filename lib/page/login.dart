@@ -71,14 +71,16 @@ class _LoginPage extends State<LoginPage> {
                     )
                   ],
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 GestureDetector(
                   child: Text(
                     "还没账号? 点击注册",
                     style: TextStyle(color: Colors.green),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, "/register");
+                    Navigator.popAndPushNamed(context, "/register");
                   },
                 )
               ],
